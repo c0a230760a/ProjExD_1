@@ -21,10 +21,9 @@ def main():
         kk_rct = kk_img.get_rect() #こうかとんのレクトの抽出
         kk_rct.center = 300, 200
         screen.blit(kk_img, kk_rct) #kkimgをkkrctに従ってスクリーンに張り付ける
-
         pg.display.update()
         tmr += 1        
-        clock.tick(10)
+        clock.tick(200)
 
 
 if __name__ == "__main__":
