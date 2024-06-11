@@ -17,13 +17,14 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
+        x = tmr%800
+        screen.blit(bg_img, [-x, 0])
         kk_rct = kk_img.get_rect() #こうかとんのレクトの抽出
         kk_rct.center = 300, 200
         screen.blit(kk_img, kk_rct) #kkimgをkkrctに従ってスクリーンに張り付ける
         pg.display.update()
         tmr += 1        
-        clock.tick(200)
+        clock.tick(200) #FPS
 
 
 if __name__ == "__main__":
